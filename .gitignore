@@ -1,0 +1,7 @@
+# Mutable per-session state written by skills during demo recordings —
+# ignored so every take starts from the same clean stage.
+.claude/*
+!.claude/settings.json
+!.claude/prompt-coach/
+.claude/prompt-coach/*
+!.claude/prompt-coach/config.json
