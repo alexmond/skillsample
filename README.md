@@ -10,6 +10,7 @@ and stay reproducible.
 | Path | Purpose |
 |---|---|
 | `workloads/import-photos.sh` | A simulated batch workload (N items, steady rate). With `PROGRESS_CLI` set it registers itself on the [progress-channel](https://github.com/alexmond/alexmskills/tree/main/plugins/progress-channel) via the shell `start`/`step`/`finish` trio — the star of the marketplace's root demo GIF. |
+| `workloads/maven-build.sh` | A simulated Maven reactor build (8 modules, realistic `mvn clean install` transcript). With `PROGRESS_CLI` set it registers as `maven build` and steps once per module — the workload behind progress-channel's recorded Claude Code demo, where the build's live bar shows in the session's status line. |
 | `workloads/transcode-clips.sh` | A bursty-rate batch workload (every 4th item is slower) with categorical outcomes (`ok`/`skipped`/`failed`) — demos progress-channel's `--count` categories and a non-steady rate feeding the learned ETA. Picked by a live [brainstorm-panel](https://github.com/alexmond/alexmskills/tree/main/plugins/brainstorm-panel) run recorded in this repo, then built and tested by the same panel's session. |
 
 ## Using a workload with progress-channel
